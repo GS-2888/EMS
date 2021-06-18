@@ -2,8 +2,8 @@ package com.ems.payroll.utils;
 
 
 
-import com.ems.payroll.entity.Salary;
-import com.ems.payroll.model.response.SalaryResponse;
+import com.payroll.domain.model.Salary;
+import com.payroll.domain.model.SalaryResponse;
 
 
 public class SalaryUtils {
