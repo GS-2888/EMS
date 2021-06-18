@@ -113,7 +113,8 @@ public class EMSSpringHibernateAdapter implements EMSPersistancePort{
 	@Override
 	public Employee getEmployee(int employeeId) {				
 		Session currentSession = entityManager.unwrap(Session.class);
-		Employee employee =	currentSession.get(Employee.class, employeeId);
+		EmployeeEntity entity =	currentSession.get(EmployeeEntity.class, employeeId);
+		Employee employee = mapper.map(entity,Employee.class);
 		return employee;
 	}
 
